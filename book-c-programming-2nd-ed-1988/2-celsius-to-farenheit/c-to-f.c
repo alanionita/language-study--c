@@ -2,18 +2,18 @@
 
 int main()
 {
-	int fahr;
-	int celsius;
-	int lower = 0;
-	int upper = 300;
-	int step = 20;
+	float fahr, celsius;
+	int lower, upper, step;
 
 	lower = 0;
 	upper = 300;
 	step = 20;
 
 	fahr = lower;
+
+	// header
 	printf("Fahrenheit\tCelsius\n");
+	
 	while (fahr <= upper) {
 		// non decimal point
 		// celsius = 5 * (fahr - 32) / 9;
@@ -25,7 +25,12 @@ int main()
 		// printf("%d\t\t%d\n", fahr, celsius);
 		
 		// prints the degrees with formatting and right indentation
-		printf("%3d\t\t%6d\n", fahr, celsius);
+		// printf("%3d\t\t%6d\n", fahr, celsius);
+		
+		// prints out to decimal values
+		//   required because the updated formular uses decimals
+		printf("%3.0f\t\t%6.1f\n", fahr, celsius);
+
 		fahr = fahr + step;
 	}
 	return 0;
