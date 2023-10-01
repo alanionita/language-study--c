@@ -16,8 +16,11 @@ int main()
 	printf("Fahrenheit\tCelsius\n");
 	while (fahr <= upper) {
 		celsius = 5 * (fahr - 32) / 9;
-		// prints the degrees without good indentation
-		printf("%d\t\t%d\n", fahr, celsius);
+		// prints the degrees without good formatting
+		// printf("%d\t\t%d\n", fahr, celsius);
+		
+		// prints the degrees with formatting and right indentation
+		printf("%3d\t\t%6d\n", fahr, celsius);
 		fahr = fahr + step;
 	}
 	return 0;
