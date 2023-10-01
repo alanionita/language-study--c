@@ -15,7 +15,12 @@ int main()
 	fahr = lower;
 	printf("Fahrenheit\tCelsius\n");
 	while (fahr <= upper) {
-		celsius = 5 * (fahr - 32) / 9;
+		// non decimal point
+		// celsius = 5 * (fahr - 32) / 9;
+
+		// adds decimal point logic
+		//   formula closer to maths
+		celsius = (5.0 / 9.0) * (fahr - 32.0);
 		// prints the degrees without good formatting
 		// printf("%d\t\t%d\n", fahr, celsius);
 		
